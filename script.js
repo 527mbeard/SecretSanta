@@ -3,9 +3,6 @@
 // Paste your /exec web address below. Write the rest yourselves.
 // =============================================================
 
-const API = "https://script.google.com/macros/s/AKfycbyjfsymm-pvR-vQzcaIcmkgq2LNDfxMdXkg4Y5fGGsSAQv9amZqxIsWw-1ZP50MMBUa/exec";
-
-let names = [];
 
 // 1. Collect the names
 //    No blanks. No duplicates.

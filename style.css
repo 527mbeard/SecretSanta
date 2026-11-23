@@ -1,1 +1,590 @@
 /* Your holiday theme goes here. Plan it with the design principles. */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&family=Sacramento&display=swap');
+
+/* =========================
+   CHRISTMAS COLOR PALETTE
+========================= */
+:root {
+  --red: #a52e3b;
+  --dark-red: #79212d;
+  --green: #254d3b;
+  --dark-green: #18382b;
+  --cream: #fffaf2;
+  --pink: #f5dfe0;
+  --gold: #c49b58;
+  --text: #493b35;
+  --muted: #8b7770;
+}
+
+/* =========================
+   GENERAL
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background-color: #f8eee6;
+
+  background-image:
+    radial-gradient(#cba9a0 0.8px, transparent 0.8px);
+  background-size: 22px 22px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background: var(--green);
+  color: var(--cream);
+  text-align: center;
+  padding: 65px 20px 75px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 5px solid var(--gold);
+}
+
+header::before {
+  content: "✦  ❄  ✧  ❄  ✦  ❄  ✧  ❄  ✦";
+  display: block;
+  color: #e6c99b;
+  font-size: 20px;
+  letter-spacing: 12px;
+  margin-bottom: 18px;
+}
+
+header::after {
+  content: "Merry Christmas • Season of Giving • Merry Christmas";
+  display: block;
+  color: #e8cdb5;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -2px;
+  color: #fffaf2;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+main {
+  width: min(90%, 700px);
+  margin: -35px auto 60px;
+  position: relative;
+  z-index: 2;
+  background: var(--cream);
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid #e7d6c7;
+  box-shadow: 0 15px 45px rgba(76, 42, 34, 0.13);
+}
+
+/* Small decorative detail */
+main::before {
+  content: "A LITTLE CHRISTMAS MAGIC";
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--red);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+form h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.65rem;
+  color: var(--green);
+  margin-top: 32px;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e7d5c4;
+}
+
+form h2:first-of-type {
+  margin-top: 15px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input {
+  width: 100%;
+  padding: 13px 15px;
+  margin: 7px 0 17px;
+  border: 1px solid #ddcabe;
+  border-radius: 5px;
+  background: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  transition: all 0.25s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(37, 77, 59, 0.10);
+}
+
+input::placeholder {
+  color: #b9a69c;
+}
+
+/* =========================
+   LABELS
+========================= */
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#add-button {
+  background: var(--pink);
+  color: var(--dark-red);
+  border: 1px solid #e6c6c6;
+  border-radius: 5px;
+  padding: 11px 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+#add-button:hover {
+  background: #edcaca;
+  transform: translateY(-2px);
+}
+
+#generate-button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 25px;
+  background: var(--red);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 12px rgba(165, 46, 59, 0.18);
+}
+
+#generate-button::before {
+  content: "🎁 ";
+}
+
+#generate-button:hover {
+  background: var(--dark-red);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(165, 46, 59, 0.25);
+}
+
+/* =========================
+   PLAYER NAME LIST
+========================= */
+#name-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 20px;
+}
+
+#name-list li {
+  background: #f7eae5;
+  border-left: 4px solid var(--red);
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* =========================
+   MESSAGE
+========================= */
+#message {
+  text-align: center;
+  margin-top: 18px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   RESULTS SHEET LINK
+========================= */
+main > a {
+  display: block;
+  text-align: center;
+  color: var(--green);
+  margin-top: 25px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+main > a:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+/* =========================
+   RESULTS MODAL
+========================= */
+.modal-content {
+  background: var(--cream);
+  border: 2px solid var(--gold);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.modal-header {
+  background: var(--green);
+  color: white;
+  border-bottom: 3px solid var(--gold);
+  padding: 22px;
+}
+
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-body {
+  padding: 28px;
+  color: var(--text);
+}
+
+.modal-footer {
+  background: #f7eae5;
+  border-top: 1px solid #e7d5c4;
+}
+
+#print-button {
+  background: var(--red);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 25px;
+  font-weight: 700;
+}
+
+#print-button:hover {
+  background: var(--dark-red);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  margin-top: auto;
+  background: var(--dark-green);
+  color: #f5e7d4;
+  text-align: center;
+  padding: 25px 15px;
+  border-top: 4px solid var(--gold);
+}
+
+footer p {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+footer p::before {
+  content: "❄  ";
+}
+
+footer p::after {
+  content: "  ❄";
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+@media (max-width: 600px) {
+  header {
+    padding: 50px 15px 65px;
+  }
+
+  header h1 {
+    letter-spacing: -1px;
+  }
+
+  header::before {
+    letter-spacing: 5px;
+    font-size: 15px;
+  }
+
+  header::after {
+    letter-spacing: 2px;
+    font-size: 8px;
+  }
+
+  main {
+    width: 93%;
+    padding: 25px 20px;
+  }
+
+  form h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* =========================
+   PRINT RESULTS
+========================= */
+@media print {
+  body {
+    background: white;
+  }
+
+  header, footer, main, .modal-header,
+  .modal-footer, .btn-close {
+    display: none !important;
+  }
+
+  .modal {
+    position: static !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .modal-content {
+    border: none;
+    box-shadow: none;
+  }
+
+  .modal-body {
+    display: block;
+  }
+}
+
+
+/* ==========================================
+   SECRET SANTA RESULTS STYLING
+========================================== */
+
+#name-list li {
+    gap: 12px;
+}
+
+#name-list li button {
+    flex-shrink: 0;
+    font-size: 11px;
+}
+
+#generate-button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+    transform: none;
+}
+
+/* Event information */
+
+.santa-event-info {
+    background: #f7eee5;
+    border: 1px solid #e7d5c4;
+    border-left: 4px solid var(--gold);
+    padding: 22px;
+    border-radius: 6px;
+}
+
+.santa-event-info h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--green);
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+}
+
+.santa-event-info p {
+    font-size: 13px;
+    margin-bottom: 9px;
+    color: var(--text);
+}
+
+.santa-event-info p:last-child {
+    margin-bottom: 0;
+}
+
+.santa-event-info strong {
+    color: var(--green);
+}
+
+/* Results heading */
+
+.santa-results-heading {
+    font-family: 'Playfair Display', serif;
+    color: var(--green);
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 30px 0 20px;
+}
+
+/* Individual match cards */
+
+.match-card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 17px 15px;
+    margin-bottom: 10px;
+    background: #fff;
+    border: 1px solid #eadbd0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.match-card:hover {
+    background: #fbf3ef;
+    border-color: var(--gold);
+    transform: translateX(3px);
+}
+
+.match-number {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-right: 12px;
+}
+
+.match-giver {
+    color: var(--green);
+}
+
+.match-arrow {
+    color: var(--muted);
+}
+
+.match-receiver {
+    color: var(--red);
+}
+
+/* Message styling */
+
+#message {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 600px) {
+
+    .match-card {
+        padding: 14px 10px;
+        font-size: 12px;
+    }
+
+    .match-number {
+        margin-right: 5px;
+    }
+
+    .santa-event-info {
+        padding: 16px;
+    }
+
+    .modal-body {
+        padding: 18px;
+    }
+
+}
+
+/* ==========================================
+   PRINT STYLING
+========================================== */
+
+@media print {
+
+    body {
+        background: white !important;
+    }
+
+    header,
+    footer,
+    main,
+    .modal-header,
+    .modal-footer,
+    .btn-close,
+    .modal-backdrop {
+        display: none !important;
+    }
+
+    .modal {
+        position: static !important;
+        display: block !important;
+        background: white !important;
+        overflow: visible !important;
+    }
+
+    .modal-dialog {
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .modal-content {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .modal-body {
+        display: block !important;
+        padding: 15px !important;
+    }
+
+    .match-card {
+        break-inside: avoid;
+        border: 1px solid #ddd;
+    }
+
+    .match-card:hover {
+        transform: none;
+    }
+
+}
